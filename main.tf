@@ -17,5 +17,7 @@ module "my-modules" {
     region = "us-west-2"
     
     eks_cluster = "eks"
+
+    node_group_name = "eksnodegroup"
     
 }
