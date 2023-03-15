@@ -19,12 +19,14 @@ jobs:
          version: 'latest' # default is latest stable
          id: install
 
-    - name: Configure AWS credentials
+    - name: AWS Configs
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ap-south-1
+          aws-region: us-west-2
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      env:
+          GITHUB_TOKEN: ${{ secrets.MY_PAT_SECRET }}
           
     - name: Update kube config
       run: aws eks update-kubeconfig --name eksclusterdemo --region ap-south-1
