@@ -15,8 +15,6 @@ module "my-modules" {
     source = "git::https://github.com/HakeemYB/eks-terra-mod.git//eks"
 
     region = "us-west-2"
-
-    instance_types = ["t2.small"]
     
     eks_cluster = "eksclusterdemo"
 
