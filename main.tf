@@ -18,6 +18,7 @@ module "my-modules" {
     region = "ap-south-1"
     
     eks_cluster = "eksclusterdemo"
+    cluster_name = "eksclusterdemo"
 
    
 
