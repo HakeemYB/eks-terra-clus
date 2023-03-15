@@ -14,6 +14,7 @@ terraform {
 module "my-modules" {
     source = "git::https://github.com/HakeemYB/eks-terra-mod.git//eks"
 
+
     region = "ap-south-1"
     
     eks_cluster = "eksclusterdemo"
