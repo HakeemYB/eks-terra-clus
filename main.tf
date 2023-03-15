@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-south-1"
 }
 
 terraform {
@@ -14,13 +14,11 @@ terraform {
 module "my-modules" {
     source = "git::https://github.com/HakeemYB/eks-terra-mod.git//eks"
 
-    region = "us-west-2"
-
-    instance_types = ["t2.small"]
+    region = "ap-south-1"
     
     eks_cluster = "eksclusterdemo"
 
-    node_group_name = "eksnodegroup"
+   
 
     
     
